@@ -1,0 +1,25 @@
+#include <stdio.h>
+
+int main(void) {
+  int arr[10]={5,2,3,4,88,6,7,8,9,10};
+  int min=arr[0],max=arr[0],max_pos=arr[0],min_pos=arr[0];
+  printf("The Elements are:");
+  for(int i=0;i<10;i++){
+    printf("%d ",arr[i]);
+  }
+  for(int i=1;i<10;i++){
+    if(arr[i]>max){
+      max=arr[i];
+       max_pos=i;
+    }
+    if(arr[i]<min){
+      min=arr[i];
+      min_pos=i;
+    }
+  }
+  printf("\nMaximum Value: %d\n",max);
+  printf("Minimum Value: %d\n",min);
+  printf("Position of Maximum Value: %d\n",max_pos);
+  printf("Position of Minimum Value: %d\n",min_pos);
+  return 0;
+}
